@@ -1,0 +1,479 @@
+/* 
+No framework has been used whatsoever. This monstrosity is the result of that decision.
+I'll try my best to document, but expectations might be futile.
+Please ask before using this commercially. Copyright infringement will be viewed seriously.
+*/
+
+
+
+/* let's import some nice fonts from google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
+
+
+/* stuff for the entire HTML */
+html {
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+body {
+    margin: 0px 0px;
+}
+
+
+/* Name is self explanatory, isn't it? */
+.full-screen {
+    min-height: 100vh;
+    min-width: 100vw;
+}
+
+
+/* Menu button stuff (that hamburger icon on top left) */
+span#menu-btn {
+    cursor: pointer;
+    font-size: 20px;
+    position: fixed;
+    top: 1.5rem;
+    left: 1.5rem;
+    border: 1px solid rgb(158, 158, 158);
+    padding: 0.5rem;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.466);
+    backdrop-filter: blur(3px);
+    z-index: 100;
+}
+
+.menu-collapsed {
+    opacity: 0;
+    display: none;
+}
+
+
+/* Menu stuff (the stuff you get when you click on the menu button) */
+div#menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 1px solid red;
+    border-radius: 10px;
+    position: fixed;
+    top: 5rem;
+    left: 2rem;
+    width: 150px;
+    height: 40vh;
+    overflow: hidden;
+    z-index: 100;
+    backdrop-filter: blur(3px);
+    background-color: rgba(255, 255, 255, 0.466);
+    border: 1px solid rgb(158, 158, 158);
+    transition: all;
+    transition-duration: 500ms;
+}
+
+div#menu span {
+    cursor: pointer;
+    transition: all;
+    transition-duration: 250ms;
+}
+
+div#menu span:hover {
+    color: rgb(112, 112, 112);
+}
+
+div#menu span span{
+    font-family:  'Montserrat', sans-serif;
+}
+
+
+/* First panel. The one with a nice picture */
+div#intro {
+    background-image: url(img/backgrounds/ecom-bg2.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right 5rem top 0px;
+    display: flex;
+    align-items: center;
+}
+
+div#company-container {
+    position: relative;
+    left: 5rem;
+    width:min-content;
+    text-align: center;
+    height: min-content;
+}
+
+h1#company-name {
+    font-size: 5rem;
+    font-weight: 500;
+    font-family: 'Comfortaa', cursive;
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+p#tagline {
+    color: rgb(201, 193, 183);
+    font-size: 1.2rem;
+    margin-top: 0;
+}
+
+input#search-bar {
+    margin-top: 2rem;
+    width: 14.5rem;
+    height: 2.5rem;
+    border-radius: 50px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 900;
+    transition: all;
+    transition-duration: 0.5s;
+    outline: none;
+}
+
+input#search-bar::placeholder {
+    color: rgb(206, 206, 206);
+}
+
+input#search-bar:focus {
+    box-shadow: 0px 0px 10px 1px rgb(197, 229, 255);
+}
+
+input[type="button"] {
+    margin: 1rem;
+    border: none;
+    font-size: larger;
+    background-color: white;
+}
+
+
+/* All the titles have this class */
+.main-title {
+    font-family: 'Montserrat', sans-serif;
+    width: 100vw;
+    text-align: center;
+}
+
+
+/* Cards stuff */
+.card-container {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: auto;
+    align-items: center;
+    height: min-content;
+    width: 100%;
+}
+
+.card-container::-webkit-scrollbar {
+    display: none;
+}
+
+.card {
+    background-color: white;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    width: 18rem;
+    height: 30rem;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 1px solid rgb(156, 155, 155);
+    border-radius: 10px;
+    margin: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+    transition: all;
+    transition-duration: 350ms;
+}
+
+.card:hover {
+    box-shadow: 5px 5px 10px 0px rgb(207, 207, 207);
+    transform: scale(105%) ;
+}
+
+.card:active {
+    transform: scale(102%) ;
+}
+
+.card .card-img {
+    width: 100%;
+    object-fit: contain;
+    height: 15rem;
+}
+
+.card .card-body .prod-title {
+    overflow-wrap: break-word;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 1000;
+}
+
+.card .card-body .prod-desc {
+    font-family: 'Nunito', sans-serif;
+    list-style: circle;
+}
+
+
+/* Products (2nd panel) stuff */
+div#products #show-more {
+    font-family: 'Nunito', sans-serif;
+    text-align: center;
+    padding: 10px;
+    border: 1px solid rgb(123, 86, 158);
+    background-color: rgba(162, 122, 197, 0.356);
+    flex-shrink: 0;
+    width: 5rem;
+    border-radius: 50px;
+    transition: all;
+    transition-duration: 350ms;
+    text-decoration: none;
+} 
+
+div#products #show-more:visited {
+    color: black;
+}
+
+div#products #show-more:hover {
+    box-shadow: 5px 5px 10px 0px rgb(207, 207, 207);
+    transform: scale(103%) ;
+}
+
+
+/* Abouts (3rd panel) stuff */
+div#abouts {
+    overflow: hidden;
+}
+
+div#abouts div.card-container {
+    width: 100%;
+}
+
+div#abouts div.card-container div.card {
+    overflow: auto;
+    cursor: unset;
+    height: 20rem;
+    -ms-overflow-style: none;
+    scrollbar-width: 0px;
+    transition: all;
+    transition-duration: 1s;
+}
+
+div#abouts div.card-container div.card::-webkit-scrollbar {
+    display: none;
+}
+
+div#abouts div.card-container div.card div.card-body {
+    height: 100%;
+}
+
+div#abouts div.card-container div.card div.card-body img.card-img {
+    height: 80%;
+}
+
+div#abouts div.card-container div.card  h2.prod-title {
+    height: 20%;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+
+}
+
+div#abouts div.card-container div.card div.card-body p.prod-desc {
+    text-align: justify;
+}
+
+div#abouts div.card-container div.card div.card-body h2.position {
+    font-family: 'Nunito', sans-serif;
+    font-weight: 100;
+    color: rgb(148, 148, 148);
+}
+
+div#abouts div.card-container div.card div.card-body img.signature {
+    width: 4rem;
+    margin-left: 75%;
+}
+
+div#abouts div#abouts-desc {
+    text-align: justify;
+    box-sizing: border-box;
+    padding: 2rem;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+.empty-field {
+    border-color: red;
+}
+
+
+/* Form (4th panel) stuff */
+div#form {
+    background-image: url(img/backgrounds/feedback_bg.jpg);
+    background-size: 45%;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+div#form div {
+    margin-left: auto;
+    position: relative;
+    right: 2.5rem;
+    width: 50%;
+    height: 80%;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 20px;
+    background-color: rgba(255, 228, 196, 0.158);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.233) inset, -2px -2px 10px 10px white inset;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.form-disabled {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+div#form div form {
+    flex-shrink: 0;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 400;
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+    box-sizing: border-box;
+    
+}
+
+div#form div form span input, div#form div form span textarea {
+    text-align: center;
+    outline: none;
+    height: 2rem;
+    border-radius: 7px;
+    border-width: 1px;
+    box-sizing: border-box;
+    width: 100%;
+    padding: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    margin-bottom: 0.7rem;
+}
+
+div#form div form span textarea {
+    height: 5rem;
+    resize: none;
+    text-align: left;
+}
+
+div#form div form span#buttons {
+    display: inline-block;
+    width: 100%;
+    text-align: center;
+}
+
+div#form div form span#buttons button {
+
+    cursor: pointer;
+    width: 45%;
+    height: 2rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 500;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+}
+
+
+/* Socials (5th panel) stuff */
+div#social {
+    overflow: hidden;
+}
+
+div#social div#wrapper {
+    height: 75vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div#social div#wrapper div#links {
+    flex-shrink: 0;
+}
+
+div#social div#wrapper div#links a img {
+    width: 5rem;
+    transition: all;
+    transition-duration: 500ms;
+}
+
+div#social div#wrapper div#links a img:hover {
+    transform: scale(105%);
+}
+
+div#social div#footer {
+    background-color: rgb(213, 235, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 15vh;
+    font-family: 'Nunito', sans-serif;;
+}
+
+
+/* Ah yes, how can I forget the all mighty media query? */
+@media only screen and (max-width: 900px) {
+    div#intro {
+        background-position: top;
+        justify-content: center;
+        align-items:flex-end;
+    }
+
+    div#company-container {
+        left: unset;
+    }
+
+    div#form {
+        background-image: none;
+        min-height: min-content;
+        margin-bottom: 5rem;
+    }
+
+    div#form div {
+        width: 100%;
+        right: unset;
+        margin-left: unset;
+        margin: auto;
+        max-width: 85%;
+    }
+
+    div#form div form {
+        width: 85%;
+    }
+
+    div#social div#wrapper div#links a img {
+        width: 3rem;
+    }
+}
+
+
+/*
+Honestly, working with cards without a framework (and making them expandable for extended use) was a pain.
+But the end result looks pretty decent. The minimalistic look that I was going after is achieved nicely (or so I guess).
+Let me know how you liked this project by leaving a review (or maybe using the feedback form ;) ). 
+
+Rating: __/10.
+Remarks: _________.
+
+Have a nice day :)
+*/

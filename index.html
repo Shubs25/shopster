@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- font-awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <!-- The CSS. The website without this is like playing cricket without bat and ball -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Catchy title ;) -->
+    <title>shopster | Shopping made simple.</title>
+</head>
+
+<body>
+    
+
+    <!-- Menu button -->
+    <span id="menu-btn" class="fa fa-bars" onclick="expand_menu(this)"></span>
+
+    <!-- The actual menu -->
+    <div id="menu">
+        <span class="fas fa-store" onclick="goto('intro')"> <span>Home</span></span>
+        <span class="fas fa-shopping-cart" onclick="goto('products')"> <span>Products</span></span>
+        <span class="fas fa-laugh-beam" onclick="goto('abouts')"> <span>About</span></span>
+        <span class="fas fa-comment" onclick="goto('form')"> <span>Feedback</span></span>
+        <span class="fas fa-heart" onclick="goto('social')"> <span>Links</span></span>
+    </div>
+
+
+    <!-- First panel -->
+    <div id="intro" class="full-screen">
+        <div id="company-container">
+            <h1 id="company-name">shopster</h1>
+            <p id="tagline">Shopping, made simple.</p>
+            <form>
+                <input type="text" name="nn" id="search-bar" placeholder="Type something here">
+                <input type="button" value="&#xf061" class="fas fa-input">
+            </form>
+        </div>
+    </div>
+
+
+    <!-- Second panel -->
+    <div id="products" class="full-screen">
+        <h1 class="main-title">Our products at a glance</h1>
+        <div class="card-container">
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product1.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Watermélone</h2>
+                    <ul class="prod-desc">
+                        <li>A watermelon</li>
+                        <li>Great taste</li>
+                        <li>That's it</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product2.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Unbranded T-shirt</h2>
+                    <ul class="prod-desc">
+                        <li>Cotton</li>
+                        <li>Free size</li>
+                        <li>Comfortable</li>
+                        <li>Washable</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product3.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Mobile Phone</h2>
+                    <ul class="prod-desc">
+                        <li>6.9 inch Screen</li>
+                        <li>8Gb RAM</li>
+                        <li>128Gb RAM</li>
+                        <li>64+6+9 MP rear camera</li>
+                        <li>12MP front camera</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product4.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Mask</h2>
+                    <ul class="prod-desc">
+                        <li>Breathable</li>
+                        <li>Reusable</li>
+                        <li>You need it</li>
+                        <li>Just buy it already</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product5.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Candy</h2>
+                    <ul class="prod-desc">
+                        <li>Unbranded</li>
+                        <li>Edible. Trust us.</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a class="card" href="#" target="blank">
+                <img src="img/products/product6.jpg" class="card-img" alt="...">
+                <div class="card-body">
+                    <h2 class="prod-title">Some weird looking cube</h2>
+                    <ul class="prod-desc">
+                        <li>Colorful</li>
+                        <li>Unsolvable by like 90%</li>
+                        <li>Please teach us how to solve</li>
+                    </ul>
+                </div>
+            </a>
+
+            <a id="show-more" href="#" target="blank">More</a>
+        </div>
+
+    </div>
+
+
+    <!-- Third panel -->
+    <div id="abouts" class="full-screen">
+        <h1 class="main-title">Who are we?</h1>
+        <div class="card-container">
+            <div class="card">
+                <img src="img/members/member1.jpg" class="card-img" alt="...">
+                <h2 class="prod-title">John Doe</h2>
+                <div class="card-body">
+                    <h2 class="position">CEO</h2>
+                    <p class="prod-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptatibus laboriosam
+                        suscipit debitis. Modi quas assumenda nostrum a amet ea nihil cupiditate ullam deserunt, ad ex
+                        deleniti et qui iste? Exercitationem, laborum consequuntur.
+                    </p>
+                    <img src="img/members/signatures/signature1.jpeg" alt="" class="signature">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/members/member2.jpg" class="card-img" alt="...">
+                <h2 class="prod-title">Jane Doe</h2>
+                <div class="card-body">
+                    <h2 class="position">COO</h2>
+                    <p class="prod-desc">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque eligendi voluptatibus laboriosam
+                        suscipit debitis. Modi quas assumenda nostrum a amet ea nihil cupiditate ullam deserunt, ad ex
+                        deleniti et qui iste? Exercitationem, laborum consequuntur.
+                    </p>
+                    <img src="img/members/signatures/signature2.jpeg" alt="" class="signature">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/members/member3.jpg" class="card-img" alt="...">
+                <h2 class="prod-title">Shubh Goswami</h2>
+                <div class="card-body">
+                    <h2 class="position">Developer</h2>
+                    <p class="prod-desc">
+                        Likes to stay anonymous. Cool fellow. The designer of this website.
+                        Voluptatum temporibus tenetur maiores voluptatibus, beatae asperiores similique incidunt
+                        reiciendis ipsa magnam possimus nisi modi alias qui vero quibusdam, corrupti iusto? Voluptate.
+                    </p>
+                    <img src="img/members/signatures/signature3.jpeg" alt="" class="signature">
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="img/members/member4.png" class="card-img" alt="...">
+                <h2 class="prod-title">Meow Paws</h2>
+                <div class="card-body">
+                    <h2 class="position">Stress Reliever</h2>
+                    <p class="prod-desc">
+                        Meow meow meow meow meow, meow meow meow meow meow meow. meow meow meow meow meow meow meow meow meow meow meow meow meow? meow meow meow. meow meow meow meow meow meow meow, meow, meow meow meow meow meow meow meow meow meow meow meow meow meow meow!
+                    </p>
+                    <img src="img/members/signatures/signature4.jpg" alt="" class="signature">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="abouts-desc">
+            <p>shopster is an e-com website which aims to simplify shopping online. We believe in minimalism. Lorem ipsum
+                dolor sit amet consectetur, adipisicing elit. Eveniet id aut minima harum eaque, assumenda nesciunt
+                ullam eum aliquid similique porro! Labore alias quaerat sit dolores, illum quo minus aliquam? Lorem
+                ipsum dolor sit, amet consectetur adipisicing elit. Non magnam itaque, atque nobis iure minus est velit
+                possimus fuga. Dolorum.
+            </p>
+
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi corporis esse enim vero maxime tempore
+                earum provident ducimus, quos still reading this? Well, this is just a demo text. We don't think you're
+                going to gain any knowledge out of it. Anyway, have a nice day. Here you go, some more lorem ipsum for
+                you: laboriosam hic nam expedita suscipit officia eveniet dicta sed! Id, accusamus.
+            </p>
+
+
+        </div>
+    </div>
+
+
+    <!-- Fourth panel -->
+    <div id="form" class="full-screen">
+        <h1 class="main-title">Feedback</h1> 
+            <div  id="form-wrapper">
+                <form action="" name="fb-form" method="POST">
+                    <span id="name">Name <br> <input type="text" name="name" onfocusout="empty_check(this)" required></span> 
+                    <span id="pno">Mobile Number <br> <input type="tel" name="mno" onfocusout="empty_check(this)" required></span>
+                    <span id="email">Email <br> <input type="email"  name="email" onfocusout="empty_check(this)" required></span>
+                    <span id="date">Date of submission <br> <input type="date" name="date" onfocusout="empty_check(this)" required></span>
+                    <span id="remarks">Remarks <br> <textarea name="remarks" onfocusout="empty_check(this)" required></textarea></span>
+                    <span id="buttons">
+                        <button type="submit">Done</button>
+                        <button type="reset" onclick="remove_placeholders()">Clear</button>
+                    </span>
+                    
+                </form>
+            </div>
+    </div>
+
+
+    <!-- Fifth panel -->
+    <div id="social" class="full-screen">
+        <h1 class="main-title">Wanna stalk us?</h1>
+        <div id="wrapper">
+            <div id="links">
+                <a href="https://instagram.com" target="blank"><img src="img/socials/instagram.png" alt=""></a>
+                <a href="https://facebook.com" target="blank"><img src="img/socials/facebook.png" alt=""></a>
+                <br>
+                <a href="https://linkedin.com" target="blank"><img src="img/socials/linkedin.png" alt=""></a>
+                <a href="https://youtube.com" target="blank"><img src="img/socials/youtube.png" alt=""></a>
+            </div>
+        </div>
+        <div id="footer">© shopster enterprise, 2020 - 2021</div>
+    </div>
+
+
+    <!-- The nerdy stuff -->
+    <script>
+        const menu = document.getElementById('menu');
+        const form = document.forms['fb-form'];
+
+
+        function expand_menu(stuff) {
+            menu.classList.toggle('menu-collapsed');
+        }
+
+        function goto(to) {
+            var element_to_scroll_to = document.getElementById(to);
+            element_to_scroll_to.scrollIntoView();
+
+        }
+
+        function empty_check(element) {
+            if(element.value == '') {
+                element.classList.add('empty-field');
+                element.placeholder = "You left me empty (T_T)";
+            }
+            else
+                element.classList.remove('empty-field');
+        }
+
+        function remove_placeholders() {
+            let inputs = form.getElementsByTagName('input');
+            let textArea = form.getElementsByTagName('textarea')[0];
+            for (i = 0; i < inputs.length; i++) {
+                inputs[i].placeholder = '';
+                inputs[i].classList.remove('empty-field');
+            }
+
+            textArea.placeholder = '';
+            textArea.classList.remove('empty-field');
+        }
+
+        document.addEventListener("DOMContentLoaded", expand_menu)
+
+    </script>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwOZ39hOvRj251ZdWS9XNUKEDcVI7otB6BAeccQqrcCBKlRTPxho45CL7pEO9yfZmE/exec'
+        
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            let form_wrapper = document.getElementById('form-wrapper');
+            form_wrapper.classList.add('form-disabled');
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then((response) => {
+                    alert("Thank you for your valuable feedback :)");
+                    form.reset();
+                })
+                .catch(error => console.error('Error!', error.message))
+                .finally(() => {
+                    form_wrapper.classList.remove('form-disabled');
+                })
+        })
+    </script>
+</body>
+
+</html>
+
+<!--
+That's all. Hope you liked it.
+Please make sure that this Markup is run with its corresponding style sheet.
+The result will look hideous otherwise.
+ -->
